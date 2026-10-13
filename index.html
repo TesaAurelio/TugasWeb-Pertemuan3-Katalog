@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Katalog La Collection Privée — Tugas Rutin 3</title>
+  <meta name="description" content="Katalog parfum Dior La Collection Privée, responsif dengan Bootstrap 5.">
+  <meta name="author" content="Tesa Aurelio Ginting">
+
+  <meta property="og:title" content="Katalog La Collection Privée">
+  <meta property="og:description" content="Katalog parfum Dior La Collection Privée dengan tata letak grid responsif.">
+  <meta property="og:type" content="website">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dior sticky-top py-3" aria-label="Navigasi utama">
+      <div class="container">
+        <a class="navbar-brand merek" href="#beranda">DIOR</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menuUtama"
+                aria-controls="menuUtama" aria-expanded="false"
+                aria-label="Buka menu navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+          <ul class="navbar-nav ms-auto align-items-md-center gap-md-4 mt-3 mt-md-0">
+            <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#panduan">Panduan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            <li class="nav-item mt-2 mt-md-0">
+              <a class="btn btn-dior btn-sm px-3" href="#katalog">Jelajahi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="hero py-5 py-lg-6">
+      <div class="container py-4">
+        <div class="row align-items-center g-4 g-lg-5">
+
+          <div class="col-12 col-lg-6 order-2 order-lg-1">
+            <span class="jenis-produk d-block mb-3">La Collection Privée</span>
+
+            <h1 class="judul-hero">
+              Siluet Aromatik<br>yang Personal
+            </h1>
+
+            <p class="subjudul-hero mt-3" style="max-width: 34rem;">
+              Rangkaian eau de parfum eksklusif Christian Dior, memadukan bahan
+              baku terpilih dengan tanda tangan olfaktif yang khas untuk tiap
+              varian.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+              <a href="#katalog" class="btn btn-dior px-4 py-2">Lihat Katalog</a>
+              <a href="#panduan" class="btn btn-garis px-4 py-2">Panduan Memilih</a>
+            </div>
+
+            <dl class="hero__statistik row mt-5 gx-4" style="max-width: 26rem;">
+              <div class="col-4">
+                <dt>Varian</dt>
+                <dd>8</dd>
+              </div>
+              <div class="col-4">
+                <dt>Ukuran</dt>
+                <dd>1.7 oz</dd>
+              </div>
+              <div class="col-4">
+                <dt>Rumah Mode</dt>
+                <dd>Paris</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="col-12 col-lg-6 order-1 order-lg-2 text-center">
+            <div class="hero__panggung mx-auto">
+              <img class="hero__botol"
+                   src="assets/img/ambre-nuit-900.jpg"
+                   srcset="assets/img/ambre-nuit-400.jpg 400w,
+                           assets/img/ambre-nuit-600.jpg 600w,
+                           assets/img/ambre-nuit-900.jpg 900w"
+                   sizes="(min-width: 992px) 30vw, 60vw"
+                   alt="Botol Ambre Nuit, salah satu varian unggulan La Collection Privée"
+                   width="900" height="1125" loading="eager" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="katalog" class="py-5">
+      <div class="container">
+
+        <div class="d-md-flex align-items-end justify-content-between gap-4 mb-4">
+          <div>
+            <h2 class="judul-seksi">Katalog La Collection Privée</h2>
+            <p class="teks-kartu mt-2" style="max-width: 40rem;">
+              Delapan komposisi eksklusif, masing-masing dengan karakter aroma dan warna khasnya sendiri.
+            </p>
+          </div>
+        </div>
+
+        <div class="filter-scroll d-flex gap-2 mb-4 pb-1">
+          <button type="button" class="chip active flex-shrink-0" data-filter="semua">Semua</button>
+          <button type="button" class="chip flex-shrink-0" data-filter="floral">Floral</button>
+          <button type="button" class="chip flex-shrink-0" data-filter="woody">Woody</button>
+          <button type="button" class="chip flex-shrink-0" data-filter="amber">Amber</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+          <div class="col" data-kategori="floral woody">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#f2e6ee; --aksen-2:#c9a8bd;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/gris-dior-600.jpg"
+                     srcset="assets/img/gris-dior-400.jpg 400w, assets/img/gris-dior-600.jpg 600w, assets/img/gris-dior-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Gris Dior berwarna ungu muda lembut dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Bestseller</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">Gris Dior</h3>
+                <p class="teks-kartu mt-2">Woody floral notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Komposisi floral berkayu yang lembut, menampilkan sisi
+                  elegan dan bersih dari keluarga chypre.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="woody floral">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#e6a4a0; --aksen-2:#7a1f1f;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/oud-ispahan-600.jpg"
+                     srcset="assets/img/oud-ispahan-400.jpg 400w, assets/img/oud-ispahan-600.jpg 600w, assets/img/oud-ispahan-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Oud Ispahan berwarna merah tua kemerahan dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Bestseller</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Esprit de Parfum</p>
+                <h3 class="judul-kartu">Oud Ispahan</h3>
+                <p class="teks-kartu mt-2">Woody and floral notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Perpaduan oud dan mawar yang pekat, membawa karakter
+                  hangat dan penuh kedalaman.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 4.510.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="woody">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#c9a15a; --aksen-2:#2a1c0d;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/bois-talisman-600.jpg"
+                     srcset="assets/img/bois-talisman-400.jpg 400w, assets/img/bois-talisman-600.jpg 600w, assets/img/bois-talisman-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Bois Talisman berwarna cokelat keemasan dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">Bois Talisman</h3>
+                <p class="teks-kartu mt-2">Woody and vanilla notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Kayu hangat berpadu vanila lembut, menghadirkan kesan
+                  nyaman dan membumi.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="floral">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#faf3e2; --aksen-2:#d9c48a;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/jasmin-des-anges-600.jpg"
+                     srcset="assets/img/jasmin-des-anges-400.jpg 400w, assets/img/jasmin-des-anges-600.jpg 600w, assets/img/jasmin-des-anges-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Jasmin des Anges berwarna cokelat keemasan cerah dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">Jasmin des Anges</h3>
+                <p class="teks-kartu mt-2">Floral, apricot and honey notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Melati putih berpadu aprikot dan madu, manis tanpa
+                  berlebihan.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="amber">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#f6dfa0; --aksen-2:#b8860b;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/dior-paradise-600.jpg"
+                     srcset="assets/img/dior-paradise-400.jpg 400w, assets/img/dior-paradise-600.jpg 600w, assets/img/dior-paradise-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Dior Paradise berwarna kuning keemasan cerah dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Baru</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">Dior Paradise</h3>
+                <p class="teks-kartu mt-2">Almond notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Aroma almond yang hangat dan gourmand, memberi kesan
+                  manis yang memikat.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="amber floral">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#d9a441; --aksen-2:#4a2e0a;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/ambre-nuit-600.jpg"
+                     srcset="assets/img/ambre-nuit-400.jpg 400w, assets/img/ambre-nuit-600.jpg 600w, assets/img/ambre-nuit-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Ambre Nuit berwarna kuning keemasan gelap dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Bestseller</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Esprit de Parfum</p>
+                <h3 class="judul-kartu">Ambre Nuit</h3>
+                <p class="teks-kartu mt-2">Amber and floral notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Amber hangat berpadu bunga malam, pekat dan misterius,
+                  cocok dipakai saat suasana formal.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 4.510.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="woody floral">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#c99a6a; --aksen-2:#4a3320;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/cuir-saddle-600.jpg"
+                     srcset="assets/img/cuir-saddle-400.jpg 400w, assets/img/cuir-saddle-600.jpg 600w, assets/img/cuir-saddle-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol Cuir Saddle berwarna cokelat karamel dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Baru</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">Cuir Saddle</h3>
+                <p class="teks-kartu mt-2">Leather and floral notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Kulit lembut berpadu sentuhan floral, karakter maskulin
+                  namun tetap halus.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col" data-kategori="amber">
+            <article class="kartu-produk h-100 d-flex flex-column">
+              <div class="kartu-produk__gambar-wrap" style="--aksen-1:#e7e7e9; --aksen-2:#8a8d93;">
+                <img class="kartu-produk__gambar"
+                     src="assets/img/new-look-600.jpg"
+                     srcset="assets/img/new-look-400.jpg 400w, assets/img/new-look-600.jpg 600w, assets/img/new-look-900.jpg 900w"
+                     sizes="(min-width: 1200px) 25vw, (min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                     alt="Botol New Look bening keabuan dengan tutup hitam bergaris"
+                     width="900" height="1125" loading="lazy" decoding="async">
+                <span class="label-badge">Bestseller</span>
+              </div>
+              <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                <p class="jenis-produk mb-1">Eau de Parfum</p>
+                <h3 class="judul-kartu">New Look</h3>
+                <p class="teks-kartu mt-2">Aldehyde and ambery notes</p>
+                <div class="intensitas mb-2">
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik intensitas__titik--aktif"></span>
+                  <span class="intensitas__titik"></span>
+                </div>
+                <p class="teks-kartu flex-grow-1">
+                  Aldehida bersih berpadu amber, penghormatan pada gaya
+                  klasik Dior era 1947.
+                </p>
+                <div class="d-flex align-items-center justify-content-between border-top mt-3 pt-3">
+                  <p class="harga-kartu mb-0">Rp 3.610.000</p>
+                  <button type="button" class="btn btn-dior btn-sm px-3">Beli</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="panduan" class="panduan py-5 py-lg-6">
+      <div class="container">
+        <h2 class="judul-seksi">Panduan Memilih</h2>
+        <p class="teks-kartu mt-2" style="max-width: 40rem;">
+          Tiga hal yang membantu menentukan varian La Collection Privée yang paling cocok.
+        </p>
+
+        <div class="row g-4 mt-2">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="panduan__item">
+              <h3 class="judul-kartu" style="text-transform:none;">Kenali Keluarga Aromanya</h3>
+              <p class="teks-kartu mt-2 mb-0">
+                Floral untuk kesan lembut dan feminin, woody untuk kesan
+                hangat dan membumi, amber untuk kesan pekat dan misterius.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="panduan__item">
+              <h3 class="judul-kartu" style="text-transform:none;">Perhatikan Intensitas</h3>
+              <p class="teks-kartu mt-2 mb-0">
+                Intensitas lebih tinggi cocok untuk acara malam atau formal.
+                Intensitas sedang lebih nyaman dipakai untuk aktivitas
+                harian.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="panduan__item">
+              <h3 class="judul-kartu" style="text-transform:none;">Coba Sebelum Membeli</h3>
+              <p class="teks-kartu mt-2 mb-0">
+                Aroma parfum dapat berubah sedikit di kulit tiap orang.
+                Semprotkan pada pergelangan tangan dan tunggu beberapa
+                menit sebelum menilai.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="py-5 py-lg-6">
+      <div class="container">
+        <div class="border p-4 p-md-5 d-lg-flex align-items-lg-center justify-content-lg-between gap-4">
+          <div style="max-width: 32rem;">
+            <h2 class="judul-seksi">Butuh Rekomendasi?</h2>
+            <p class="teks-kartu mt-2 mb-0">
+              Tinggalkan surel untuk mendapatkan panduan memilih parfum sesuai
+              karakter dan acara yang kamu tuju.
+            </p>
+          </div>
+
+          <form class="d-flex flex-column flex-sm-row gap-3 mt-4 mt-lg-0" action="#" method="post">
+            <label for="surel" class="visually-hidden">Alamat surel</label>
+            <input type="email" id="surel" name="surel" required
+                   placeholder="nama@email.com"
+                   class="form-control rounded-0 px-4 py-2" style="min-width: 16rem;">
+            <button type="submit" class="btn btn-dior px-4">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <p class="merek mb-2">DIOR</p>
+          <p class="teks-kartu" style="max-width: 20rem;">
+            Katalog ini dibuat sebagai tugas kuliah dan tidak berafiliasi
+            dengan Christian Dior maupun distributor resminya.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <h3 class="small fw-semibold">Katalog</h3>
+          <ul class="list-unstyled teks-kartu mt-3">
+            <li class="mb-2"><a href="#katalog">La Collection Privée</a></li>
+            <li class="mb-2"><a href="#katalog">Floral</a></li>
+            <li><a href="#katalog">Woody &amp; Amber</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-4">
+          <h3 class="small fw-semibold">Tugas</h3>
+          <ul class="list-unstyled teks-kartu mt-3">
+            <li>Pemrograman Web</li>
+            <li>Tugas Rutin 3</li>
+            <li>Ilmu Komputer, Fakultas Matematika dan Ilmu Pengetahuan Alam</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2 border-top mt-4 pt-4">
+        <p class="teks-kartu mb-0">&copy; <time datetime="2026">2026</time> Tesa Aurelio Ginting.</p>
+        <p class="teks-kartu mb-0">Dibangun dengan HTML5 &amp; Bootstrap 5.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const tombolFilter = document.querySelectorAll('.chip[data-filter]');
+      const kartuProduk = document.querySelectorAll('#katalog .col[data-kategori]');
+
+      tombolFilter.forEach(function (tombol) {
+        tombol.addEventListener('click', function () {
+          tombolFilter.forEach(function (t) { t.classList.remove('active'); });
+          tombol.classList.add('active');
+
+          const filterTerpilih = tombol.dataset.filter;
+
+          kartuProduk.forEach(function (kartu) {
+            const kategoriKartu = kartu.dataset.kategori.split(' ');
+            const cocok = filterTerpilih === 'semua' || kategoriKartu.includes(filterTerpilih);
+            kartu.style.display = cocok ? '' : 'none';
+          });
+        });
+      });
+    })();
+
+    document.querySelectorAll('#menuUtama .nav-link, #menuUtama .btn').forEach(function (tautan) {
+      tautan.addEventListener('click', function () {
+        var menu = document.getElementById('menuUtama');
+        if (menu.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
